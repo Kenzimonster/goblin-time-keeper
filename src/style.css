@@ -1,0 +1,19 @@
+Body {
+  background-color: lightpink;
+}
+
+h1 {
+  color: magenta;
+  text-align: center;
+}
+
+div {
+  color: tomato;
+  text-align: center;
+}
+
+footer {
+  color: magenta;
+  text-align: center;
+  font-size: 16px;
+}
