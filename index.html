@@ -10,41 +10,62 @@
   </head>
   <body>
     <section>
-      <header class="pageTop">
+      <header>
         <h1>Goblin Time Keeper</h1>
-
-        <div class="citySelect">
-          <form>
-            <select>
-              <option value="">select a city</option>
-              <option value="london">london</option>
-              <option value="amsterdam">amsterdam</option>
-              <option value="houston">Houston</option>
-              <option value="lisbon">Lisbon</option>
-              <option value="perth">Perth</option>
-            </select>
-          </form>
+        <div class="pageTop">
+          <div class="topLeft">
+            <div>
+              <form id="city-select">
+                <select class="citySelect" name="city-selector">
+                  <option value="">select a city</option>
+                  <option value="london">london</option>
+                  <option value="amsterdam">amsterdam</option>
+                  <option value="houston">Houston</option>
+                  <option value="lisbon">Lisbon</option>
+                  <option value="perth">Perth</option>
+                </select>
+              </form>
+            </div>
+            <div class="currentLocation">
+              <p>
+                your current time is<br /><span
+                  class="localTime"
+                  id="local-time"
+                  >jij</span
+                >
+              </p>
+            </div>
+          </div>
+          <img
+            src="image/placeholder.png"
+            alt="Goblin Clock Icon"
+            class="icon"
+          />
         </div>
-        <div class="currentLocation">
-          <p>
-            your current time is<br /><span class="localTime" id="local-time"
-              >jij</span
-            >
-          </p>
-        </div>
-        <img src="image/placeholder.png" alt="Goblin Clock Icon" class="icon" />
       </header>
+
       <div class="otherLocales">
-        <div class="cityName"><p>Paris</p></div>
-        <div class="cityDate"><p>sat, 29 of June, 2024</p></div>
-        <div class+="cityTime"><p>12:51:42 PM</p></div>
-        <div class="cityName"><p>Tokyo</p></div>
-        <div class="cityDate"><p>sat, 29 of June, 2024</p></div>
-        <div class+="cityTime"><p>12:51:42 PM</p></div>
-        <div class="cityName"><p>Hawaii</p></div>
-        <div class="cityDate"><p>sat, 29 of June, 2024</p></div>
+        <div>
+          <div class="cityName"><p>Paris</p></div>
+          <div class="cityDate"><p>sat, 29 of June, 2024</p></div>
+        </div>
         <div class+="cityTime"><p>12:51:42 PM</p></div>
       </div>
+      <div class="otherLocales">
+        <div>
+          <div class="cityName"><p>Tokyo</p></div>
+          <div class="cityDate"><p>sat, 29 of June, 2024</p></div>
+        </div>
+        <div class+="cityTime"><p>12:51:42 PM</p></div>
+      </div>
+      <div class="otherLocales">
+        <div>
+          <div class="cityName"><p>Hawaii</p></div>
+          <div class="cityDate"><p>sat, 29 of June, 2024</p></div>
+        </div>
+        <div class+="cityTime"><p>12:51:42 PM</p></div>
+      </div>
+
       <footer>
         <p>
           This project was coded by<a
