@@ -7,11 +7,15 @@ h1 {
   text-align: center;
 }
 
-div {
-  color: tomato;
+.currentLocation {
   text-align: center;
 }
-
+.localTime {
+  color: tomato;
+}
+.icon {
+  width: 100px;
+}
 footer {
   color: magenta;
   text-align: center;
