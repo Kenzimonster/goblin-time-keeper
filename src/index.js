@@ -37,3 +37,24 @@ function presets() {
 }
 presets();
 setInterval(presets, 1000);
+
+function citySeletor(event) {
+  let cityTimeZone = event.target.value;
+  if (cityTimeZone === "current") {
+    cityTimeZone = moment.tz.guess();
+  }
+  let cityName = cityTimeZone.replace("_", " ").split("/")[1];
+  let cityTime = moment().tz(cityTimeZone);
+  let selectedCity = document.querySelector("#selectedCity");
+  selectedCity.innerHTML = `<div>
+          <div class ="cityName">${cityName}</div>
+          <div class ="date">${cityTime.format("ddd, MMMM Do, YYYY")}</div>
+        </div>
+        <div class ="cityTime">
+          <span class ="hourMin">${cityTime.format(
+            "h:mm"
+          )}</span><span class="seconds">${cityTime.format(":ss A")}</span>
+        </div>`;
+}
+let citySelectElement = document.querySelector("#city-select");
+citySelectElement.addEventListener("change", citySeletor);
