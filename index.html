@@ -5,11 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.30.1/moment.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.45/moment-timezone-with-data-1970-2030.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100..900;1,100..900&family=Kaushan+Script&display=swap"
+      rel="stylesheet"
+    />
     <link href="src/style.css" rel="stylesheet" />
     <title>Document</title>
   </head>
   <body>
-    <section>
+    <section class="timeBoard">
       <header>
         <h1>Goblin Time Keeper</h1>
         <div class="pageTop">
@@ -43,50 +49,49 @@
           />
         </div>
       </header>
-
+      <hr />
       <div class="otherLocales">
         <div>
-          <div class="cityName"><p>Paris</p></div>
-          <div class="cityDate"><p>sat, 29 of June, 2024</p></div>
+          <div class="cityName">Paris</div>
+          <div class="cityDate">sat, 29 of June, 2024</div>
         </div>
-        <div class+="cityTime"><p>12:51:42 PM</p></div>
+        <div class="cityTime">12:51<span class="citySeconds">:42 PM</span></div>
       </div>
       <div class="otherLocales">
         <div>
-          <div class="cityName"><p>Tokyo</p></div>
-          <div class="cityDate"><p>sat, 29 of June, 2024</p></div>
+          <div class="cityName">Tokyo</div>
+          <div class="cityDate">sat, 29 of June, 2024</div>
         </div>
-        <div class+="cityTime"><p>12:51:42 PM</p></div>
+        <div class="cityTime">12:51<span class="citySeconds">:42 PM</span></div>
       </div>
       <div class="otherLocales">
         <div>
-          <div class="cityName"><p>Hawaii</p></div>
-          <div class="cityDate"><p>sat, 29 of June, 2024</p></div>
+          <div class="cityName">Hawaii</div>
+          <div class="cityDate">sat, 29 of June, 2024</div>
         </div>
-        <div class+="cityTime"><p>12:51:42 PM</p></div>
+        <div class="cityTime">12:51<span class="citySeconds">:42 PM</span></div>
       </div>
-
-      <footer>
-        <p>
-          This project was coded by<a
-            href="https://github.com/Kenzimonster"
-            target="_blank"
-            >Kenzi👺</a
-          >
-          <br />
-          And is open-sourced on
-          <a
-            href="https://github.com/Kenzimonster/goblin-time-keeper"
-            target="_blank"
-            >GitHub</a
-          >,<br />
-          And hosted on
-          <a href="https://goblin-time-keeper.netlify.app/" target="_blank"
-            >Netlfiy</a
-          >
-        </p>
-      </footer>
     </section>
+    <footer>
+      <p>
+        This project was coded by<a
+          href="https://github.com/Kenzimonster"
+          target="_blank"
+          >Kenzi👺</a
+        >
+        <br />
+        And is open-sourced on
+        <a
+          href="https://github.com/Kenzimonster/goblin-time-keeper"
+          target="_blank"
+          >GitHub</a
+        >, And hosted on
+        <a href="https://goblin-time-keeper.netlify.app/" target="_blank"
+          >Netlfiy</a
+        >
+      </p>
+    </footer>
+
     <script src="src/index.js"></script>
   </body>
 </html>

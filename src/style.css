@@ -1,10 +1,23 @@
 Body {
-  background-color: lightpink;
+  background-color: aquamarine;
+  font-family: "Bitter", serif;
 }
 
 h1 {
-  color: magenta;
+  color: rgb(141, 0, 141);
+  font-family: "Kaushan Script", cursive;
+  font-size: 70px;
   text-align: center;
+  margin: 0px auto 30px auto;
+}
+
+.timeBoard {
+  background-color: rgb(241, 190, 207);
+  border-radius: 8px;
+  margin: 5px auto 5px;
+  max-width: 750px;
+  min-width: 500px;
+  padding: 10px 0px 5px 0px;
 }
 
 .currentLocation {
@@ -12,17 +25,24 @@ h1 {
   margin: 5px auto;
   font-size: 14px;
 }
-.localTime {
-  color: tomato;
-}
-.icon {
-  width: 100px;
-}
-footer {
-  color: magenta;
-  text-align: center;
+
+.localTime,
+.cityDate {
+  color: rgba(235, 71, 42, 0.9);
   font-size: 16px;
 }
+
+.icon {
+  margin: auto;
+  width: 100px;
+}
+
+footer {
+  color: rgb(119, 5, 43);
+  text-align: center;
+  font-size: 13px;
+}
+
 .pageTop {
   display: flex;
   margin: 15px auto;
@@ -30,13 +50,19 @@ footer {
 }
 
 .citySelect {
+  border: none;
+  font-family: "Kaushan Script", cursive;
+  background-color: aquamarine;
+  color: rgb(141, 0, 141);
   display: block;
   width: 70%;
-  padding: 10px;
+  font-size: 16px;
+  padding: 5px;
   border-radius: 10px;
   text-align: center;
-  margin: 0px auto;
+  margin: 5px auto;
 }
+
 .topLeft {
   width: 60%;
 }
@@ -44,4 +70,27 @@ footer {
 .otherLocales {
   display: flex;
   justify-content: space-evenly;
+  margin: 20px auto;
+}
+
+.cityName {
+  color: rgb(87, 2, 87);
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.cityTime {
+  color: rgb(116, 1, 116);
+  font-size: 50px;
+  font-weight: bold;
+}
+
+.citySeconds {
+  font-weight: normal;
+  font-size: 25px;
+  opacity: 0.7;
+  vertical-align: top;
+}
+
+.cityWrapper {
 }
