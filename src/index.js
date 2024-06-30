@@ -20,7 +20,9 @@ function presets() {
     currentSec.innerHTML = currentMoment.format(":ss A");
   } else {
     let selectedCity = document.querySelector("#selectedCity");
+    let returnLink = document.querySelector("#reset");
     selectedCity.innerHTML = null;
+    returnLink.innerHTML = null;
   }
   //Paris
   let parisData = document.querySelector("#paris");
@@ -59,6 +61,7 @@ function citySeletor(event) {
   let cityName = cityTimeZone.replace("_", " ").split("/")[1];
   let cityTime = moment().tz(cityTimeZone);
   let selectedCity = document.querySelector("#selectedCity");
+  let returnLink = document.querySelector("#reset");
   selectedCity.innerHTML = `<div>
           <div class ="cityName">${cityName}</div>
           <div class ="date">${cityTime.format("ddd, MMMM Do, YYYY")}</div>
@@ -68,6 +71,7 @@ function citySeletor(event) {
             "h:mm"
           )}</span><span class="seconds">${cityTime.format(":ss A")}</span>
         </div>`;
+  returnLink.innerHTML = `<a href="/">Clear Selected City🔙</a>`;
 }
 let citySelectElement = document.querySelector("#city-select");
 citySelectElement.addEventListener("change", citySeletor);

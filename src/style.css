@@ -20,33 +20,14 @@ h1 {
   padding: 10px 0px 5px 0px;
 }
 
-.currentLocation {
-  text-align: center;
-  margin: 5px auto;
-  font-size: 14px;
-}
-
-.caveTime,
-.date {
-  color: rgba(235, 71, 42, 0.9);
-  font-size: 16px;
-}
-
-.icon {
-  margin: auto;
-  width: 100px;
-}
-
-footer {
-  color: rgb(119, 5, 43);
-  text-align: center;
-  font-size: 13px;
-}
-
 .pageTop {
   display: flex;
   margin: 15px auto;
   justify-content: space-evenly;
+}
+
+.topLeft {
+  width: 60%;
 }
 
 .citySelect {
@@ -63,8 +44,21 @@ footer {
   margin: 5px auto;
 }
 
-.topLeft {
-  width: 60%;
+.cave {
+  text-align: center;
+  margin: 5px auto;
+  font-size: 14px;
+}
+
+.icon {
+  margin: auto;
+  width: 100px;
+}
+
+.caveTime,
+.date {
+  color: rgba(235, 71, 42, 0.9);
+  font-size: 16px;
 }
 
 .otherLocales {
@@ -90,4 +84,20 @@ footer {
   font-size: 25px;
   opacity: 0.7;
   vertical-align: top;
+}
+
+.reset {
+  background-color: rgb(179, 102, 143);
+  border-radius: 20px;
+  text-align: center;
+  font-size: 14px;
+  width: 160px;
+  display: block;
+  margin: 5px auto;
+}
+
+footer {
+  color: rgb(119, 5, 43);
+  text-align: center;
+  font-size: 13px;
 }
