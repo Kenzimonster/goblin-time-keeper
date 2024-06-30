@@ -3,10 +3,25 @@ function displayLocalTime() {
   let time = moment().tz(moment.tz.guess()).format(`LLLL`);
   local.innerHTML = time;
 }
-displayLocalTime();
-setInterval(displayLocalTime, 1000);
 
 function presets() {
+  if (citySelectElement.value) {
+    let cityTimeZone = citySelectElement.value;
+    if (cityTimeZone === "current") {
+      cityTimeZone = moment.tz.guess();
+    }
+    let currentData = document.querySelector("#selectedCity");
+    let currentDate = currentData.querySelector(".date");
+    let currentTime = currentData.querySelector(".hourMin");
+    let currentSec = currentData.querySelector(".seconds");
+    let currentMoment = moment().tz(cityTimeZone);
+    currentDate.innerHTML = currentMoment.format("ddd, MMMM Do, YYYY");
+    currentTime.innerHTML = currentMoment.format("h:mm");
+    currentSec.innerHTML = currentMoment.format(":ss A");
+  } else {
+    let selectedCity = document.querySelector("#selectedCity");
+    selectedCity.innerHTML = null;
+  }
   //Paris
   let parisData = document.querySelector("#paris");
   let parisDate = parisData.querySelector(".date");
@@ -35,8 +50,6 @@ function presets() {
   hawaiiTime.innerHTML = hawaiiMoment.format("h:mm");
   hawaiiSec.innerHTML = hawaiiMoment.format(":ss A");
 }
-presets();
-setInterval(presets, 1000);
 
 function citySeletor(event) {
   let cityTimeZone = event.target.value;
@@ -58,3 +71,7 @@ function citySeletor(event) {
 }
 let citySelectElement = document.querySelector("#city-select");
 citySelectElement.addEventListener("change", citySeletor);
+displayLocalTime();
+setInterval(displayLocalTime, 1000);
+presets();
+setInterval(presets, 1000);
