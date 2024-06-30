@@ -12,7 +12,7 @@
       rel="stylesheet"
     />
     <link href="src/style.css" rel="stylesheet" />
-    <title>Document</title>
+    <title>Goblin Time Keeper</title>
   </head>
   <body>
     <section class="timeBoard">
@@ -37,8 +37,7 @@
                 your current time is<br /><span
                   class="localTime"
                   id="local-time"
-                  >jij</span
-                >
+                ></span>
               </p>
             </div>
           </div>
@@ -50,26 +49,32 @@
         </div>
       </header>
       <hr />
-      <div class="otherLocales">
+      <div class="otherLocales" id="paris">
         <div>
           <div class="cityName">Paris</div>
-          <div class="cityDate">sat, 29 of June, 2024</div>
+          <div class="date"></div>
         </div>
-        <div class="cityTime">12:51<span class="citySeconds">:42 PM</span></div>
+        <div class="cityTime">
+          <span class="hourMin"></span><span class="seconds"></span>
+        </div>
       </div>
-      <div class="otherLocales">
+      <div class="otherLocales" id="tokyo">
         <div>
           <div class="cityName">Tokyo</div>
-          <div class="cityDate">sat, 29 of June, 2024</div>
+          <div class="date"></div>
         </div>
-        <div class="cityTime">12:51<span class="citySeconds">:42 PM</span></div>
+        <div class="cityTime">
+          <span class="hourMin"></span><span class="seconds"></span>
+        </div>
       </div>
-      <div class="otherLocales">
+      <div class="otherLocales" id="hawaii">
         <div>
-          <div class="cityName">Hawaii</div>
-          <div class="cityDate">sat, 29 of June, 2024</div>
+          <div class="cityName">Honolulu</div>
+          <div class="date"></div>
         </div>
-        <div class="cityTime">12:51<span class="citySeconds">:42 PM</span></div>
+        <div class="cityTime">
+          <span class="hourMin"></span><span class="seconds"></span>
+        </div>
       </div>
     </section>
     <footer>

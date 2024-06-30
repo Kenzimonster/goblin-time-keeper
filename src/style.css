@@ -27,7 +27,7 @@ h1 {
 }
 
 .localTime,
-.cityDate {
+.date {
   color: rgba(235, 71, 42, 0.9);
   font-size: 16px;
 }
@@ -85,7 +85,7 @@ footer {
   font-weight: bold;
 }
 
-.citySeconds {
+.seconds {
   font-weight: normal;
   font-size: 25px;
   opacity: 0.7;
