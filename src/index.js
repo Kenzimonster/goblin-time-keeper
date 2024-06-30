@@ -1,7 +1,7 @@
-function displayLocalTime() {
-  let local = document.querySelector("#local-time");
-  let time = moment().tz(moment.tz.guess()).format(`LLLL`);
-  local.innerHTML = time;
+function displayCaveTime() {
+  let cave = document.querySelector("#cave-time");
+  let time = moment().tz("Australia/Sydney").format(`LLLL`);
+  cave.innerHTML = time;
 }
 
 function presets() {
@@ -27,28 +27,28 @@ function presets() {
   let parisDate = parisData.querySelector(".date");
   let parisTime = parisData.querySelector(".hourMin");
   let parisSec = parisData.querySelector(".seconds");
-  let parisMoment = moment().tz("Europe/Paris");
+  let parisMoment = moment().tz("America/Winnipeg");
   parisDate.innerHTML = parisMoment.format("ddd, MMMM Do, YYYY");
   parisTime.innerHTML = parisMoment.format("h:mm");
   parisSec.innerHTML = parisMoment.format(":ss A");
   //Tokyo
-  let tokyoData = document.querySelector("#tokyo");
-  let tokyoDate = tokyoData.querySelector(".date");
-  let tokyoTime = tokyoData.querySelector(".hourMin");
-  let tokyoSec = tokyoData.querySelector(".seconds");
-  let tokyoMoment = moment().tz("Asia/Tokyo");
-  tokyoDate.innerHTML = tokyoMoment.format("ddd, MMMM Do, YYYY");
-  tokyoTime.innerHTML = tokyoMoment.format("h:mm");
-  tokyoSec.innerHTML = tokyoMoment.format(":ss A");
+  let amsterdamData = document.querySelector("#amsterdam");
+  let amsterdamDate = amsterdamData.querySelector(".date");
+  let amsterdamTime = amsterdamData.querySelector(".hourMin");
+  let amsterdamSec = amsterdamData.querySelector(".seconds");
+  let amsterdamMoment = moment().tz("Europe/Amsterdam");
+  amsterdamDate.innerHTML = amsterdamMoment.format("ddd, MMMM Do, YYYY");
+  amsterdamTime.innerHTML = amsterdamMoment.format("h:mm");
+  amsterdamSec.innerHTML = amsterdamMoment.format(":ss A");
   //Honolulu
-  let hawaiiData = document.querySelector("#hawaii");
-  let hawaiiDate = hawaiiData.querySelector(".date");
-  let hawaiiTime = hawaiiData.querySelector(".hourMin");
-  let hawaiiSec = hawaiiData.querySelector(".seconds");
-  let hawaiiMoment = moment().tz("Pacific/Honolulu");
-  hawaiiDate.innerHTML = hawaiiMoment.format("ddd, MMMM Do, YYYY");
-  hawaiiTime.innerHTML = hawaiiMoment.format("h:mm");
-  hawaiiSec.innerHTML = hawaiiMoment.format(":ss A");
+  let brisbaneData = document.querySelector("#brisbane");
+  let brisbaneDate = brisbaneData.querySelector(".date");
+  let brisbaneTime = brisbaneData.querySelector(".hourMin");
+  let brisbaneSec = brisbaneData.querySelector(".seconds");
+  let brisbaneMoment = moment().tz("Australia/Brisbane");
+  brisbaneDate.innerHTML = brisbaneMoment.format("ddd, MMMM Do, YYYY");
+  brisbaneTime.innerHTML = brisbaneMoment.format("h:mm");
+  brisbaneSec.innerHTML = brisbaneMoment.format(":ss A");
 }
 
 function citySeletor(event) {
@@ -71,7 +71,7 @@ function citySeletor(event) {
 }
 let citySelectElement = document.querySelector("#city-select");
 citySelectElement.addEventListener("change", citySeletor);
-displayLocalTime();
-setInterval(displayLocalTime, 1000);
+displayCaveTime();
+setInterval(displayCaveTime, 1000);
 presets();
 setInterval(presets, 1000);
